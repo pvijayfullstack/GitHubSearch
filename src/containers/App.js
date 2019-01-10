@@ -1,25 +1,61 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { selectUser, fetchUserAndRepos } from '../actions';
+import Picker from '../components/Picker';
+import User from '../components/User';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/containers/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(user) {
+        const { dispatch } = this.props;
+        dispatch(selectUser(user));
+        dispatch(fetchUserAndRepos(user));
+    }
+
+    render() {
+        const { currentUser, currentUserData, userRepos } = this.props;
+        const { userData } = currentUserData;
+        return (
+            <div>
+                <Picker onSubmit={this.handleSubmit} />
+                {currentUserData.isFetching && <h2 className="loading">loading...</h2>}
+                {!currentUserData.isFetching &&
+                    userData.message && (
+                        <div>
+                            <h2>{userData.message}</h2>
+                            <p>{userData.documentation_url}</p>
+                        </div>
+                    )}
+                {currentUser !== '' &&
+                    !userData.message &&
+                    !currentUserData.isFetching && (
+                        <User
+                            currentUserData={currentUserData}
+                            userRepos={userRepos}
+                        />
+                    )}
+            </div>
+        );
+    }
 }
 
-export default App;
+App.propTypes = {
+    currentUser: PropTypes.string.isRequired,
+    dispatch: PropTypes.func.isRequired,
+};
+
+function mapStateToProps(state) {
+    const { currentUser, currentUserData, userRepos } = state;
+    return {
+        currentUser,
+        currentUserData,
+        userRepos,
+    };
+}
+
+export default connect(mapStateToProps)(App);
