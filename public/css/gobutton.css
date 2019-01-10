@@ -1,0 +1,15 @@
+/* Go Button (Start) */
+.go-button {
+ font-family: "Poiret One";
+ color: white;
+ margin: 5px;
+ font-size: 3vh;
+ height: 35px;
+ width: 50px;
+ border-radius: 5px;
+ border: none;
+ box-shadow: 1px 1px 0px 2px rgba (0,0,0,0.3);
+ background: #51CC51;
+ cursor: pointer;
+}
+/* Go Button (End) */

@@ -27,3 +27,13 @@
   margin: 0;
   }
 /* Searchbar(End) */
+
+/* Loading(Start) */
+.loading {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  color: red;
+  font-size: 4vh;
+  margin: 0;
+  }
+/* loading (End) */

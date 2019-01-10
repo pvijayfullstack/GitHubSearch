@@ -1,0 +1,35 @@
+/* Logo (Start)*/
+.logo {
+  height: 100px;
+  width: 100px;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5vh;
+  position: relative;
+  border: none;
+	background: none;
+	border-radius: 5px;
+	box-sizing: border-box;
+	transition: all 500ms ease;
+}
+
+.logo:hover {
+  animation: bounce 1s;
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+@keyframes bounce {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+/* Logo (End)*/

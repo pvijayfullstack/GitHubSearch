@@ -1,0 +1,77 @@
+.search-results {
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+/* Username (Start) */
+.user-name {
+  font-family: 'Poiret One', cursive;
+  font-size: 4vh;
+  color: #51CC51;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  }
+/* Username (End) */
+
+
+/* Repos Title (Start) */
+.repos-header {
+  list-style: none;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  color: black;
+  font-size: 2.5vh;
+  }
+/* Repos Title (End) */
+
+
+/* Repos Detail (Start) */
+.repo-detail {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  list-style: none;
+  color: black;
+  font-size: 3vh;
+  }
+/* Repos Detail (End) */
+
+
+/* Link icon (Start) */
+.link {
+  width: 50px;
+	height: 50px;
+  }
+/* link icon (End) */
+
+
+/* Link text(Start) */
+.link-text {
+  font-size: 2vh;
+  text-decoration: none;
+  color: black;
+  }
+/* link text (End) */
+
+
+/* Repos info (Start) */
+.repo-info {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  list-style: none;
+  color: black;
+  background: linear-gradient(to left, #a8e063 0%, #51CC51 100%);
+  font-size: 2.5vh;
+  margin: 1vh;
+  padding: 1vh;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 75px;
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 5px;
+  }
+/* Repos info (End) */

@@ -1,0 +1,47 @@
+.main-image {
+	width: 200px;
+	height: 200px;
+}
+
+.photo {
+  margin: 60px auto;
+  border: 5px solid #ededed;
+  width: 200px;
+  height: 200px;
+  position: relative;
+
+  /*overly complex but cool shadow*/
+  -webkit-box-shadow: 0px 10px 7px rgba(0,0,0,0.4), 0px 20px 10px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0px 10px 7px rgba(0,0,0,0.4), 0px 20px 10px rgba(0,0,0,0.2);
+          box-shadow: 0px 10px 7px rgba(0,0,0,0.4), 0px 20px 10px rgba(0,0,0,0.2);
+}
+
+
+.photo::before {
+  content: '';
+  height: 20px;
+  width: 100px;
+  background: rgba(255,255,255,0.5);
+  position: absolute;
+  top: -15px;
+  left: 50px;
+
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+     -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+          box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+}
+
+.box2 {
+	float: left;
+	width: 200px;
+	height: 100px;
+	margin: 1em;
+	border: 4px green solid;
+	display: inline-block;
+}
+
+.box {
+	border: 4px yellow solid;
+	height: 100px;
+	clear: left;
+}
