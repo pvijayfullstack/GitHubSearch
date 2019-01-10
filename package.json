@@ -1,5 +1,6 @@
 {
   "name": "githubsearch",
+  "description": "A react.js/redux git hub API search tool",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
